@@ -20,9 +20,9 @@ final class ImageClassificationModel: ObservableObject {
     private lazy var classificationRequest: VNCoreMLRequest = {
         do {
             let model = try VNCoreMLModel(for: Resnet50().model)
-            let request = VNCoreMLRequest(model: model) { [weak self] request, error in
+            let request = VNCoreMLRequest(model: model, completionHandler: { [weak self] request, error in
                 self?.processClassifications(for: request, error: error)
-            }
+            })
             request.imageCropAndScaleOption = .centerCrop
             
             return request
@@ -38,7 +38,7 @@ final class ImageClassificationModel: ObservableObject {
         guard let ciImage = CIImage(image: self.image!) else { fatalError("Unable to create \(CIImage.self) from \(String(describing: image))") }
         
         DispatchQueue.global(qos: .userInitiated).async {
-            let handler = VNImageRequestHandler(cgImage: ciImage as! CGImage, orientation: orientation)
+            let handler = VNImageRequestHandler(ciImage: ciImage, orientation: orientation)
             do {
                 try handler.perform([self.classificationRequest])
             } catch {

@@ -17,6 +17,7 @@
 		AD9C60752378AE3E000F5F7F /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9C60742378AE3E000F5F7F /* UIImage+Extension.swift */; };
 		AD9C60792378B07E000F5F7F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9C60782378B07E000F5F7F /* ImagePicker.swift */; };
 		AD9C607B2378F627000F5F7F /* ImageClassificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9C607A2378F627000F5F7F /* ImageClassificationModel.swift */; };
+		AD9C607F2379E1F6000F5F7F /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9C607E2379E1F6000F5F7F /* View+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		AD9C60742378AE3E000F5F7F /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		AD9C60782378B07E000F5F7F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		AD9C607A2378F627000F5F7F /* ImageClassificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassificationModel.swift; sourceTree = "<group>"; };
+		AD9C607E2379E1F6000F5F7F /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +66,13 @@
 		AD9C605C2378AD90000F5F7F /* CoreML SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				AD9C60712378ADE4000F5F7F /* ML Model */,
-				AD9C60772378B03C000F5F7F /* Extention */,
 				AD9C605D2378AD90000F5F7F /* AppDelegate.swift */,
 				AD9C605F2378AD90000F5F7F /* SceneDelegate.swift */,
 				AD9C60612378AD90000F5F7F /* ContentView.swift */,
-				AD9C607A2378F627000F5F7F /* ImageClassificationModel.swift */,
+				AD9C60712378ADE4000F5F7F /* ML Model */,
+				AD9C60772378B03C000F5F7F /* Extention */,
+				AD9C607D2379DD66000F5F7F /* View */,
+				AD9C607C2379DD52000F5F7F /* View Model */,
 				AD9C60632378AD93000F5F7F /* Assets.xcassets */,
 				AD9C60682378AD93000F5F7F /* LaunchScreen.storyboard */,
 				AD9C606B2378AD93000F5F7F /* Info.plist */,
@@ -99,8 +102,24 @@
 			isa = PBXGroup;
 			children = (
 				AD9C60742378AE3E000F5F7F /* UIImage+Extension.swift */,
+				AD9C607E2379E1F6000F5F7F /* View+Extension.swift */,
 			);
 			path = Extention;
+			sourceTree = "<group>";
+		};
+		AD9C607C2379DD52000F5F7F /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD9C607A2378F627000F5F7F /* ImageClassificationModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		AD9C607D2379DD66000F5F7F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +195,7 @@
 			files = (
 				AD9C607B2378F627000F5F7F /* ImageClassificationModel.swift in Sources */,
 				AD9C605E2378AD90000F5F7F /* AppDelegate.swift in Sources */,
+				AD9C607F2379E1F6000F5F7F /* View+Extension.swift in Sources */,
 				AD9C60602378AD90000F5F7F /* SceneDelegate.swift in Sources */,
 				AD9C60752378AE3E000F5F7F /* UIImage+Extension.swift in Sources */,
 				AD9C60792378B07E000F5F7F /* ImagePicker.swift in Sources */,
